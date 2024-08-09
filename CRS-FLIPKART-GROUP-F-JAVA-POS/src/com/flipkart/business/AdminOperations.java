@@ -89,12 +89,12 @@ public class AdminOperations {
 		return null;
 	}
 	public void sendFeePayNotification() {
+		System.out.println("Send Fee Payment Notification");
 	}
 
 	public void PaymentCompletionNotification() {
-
+		System.out.println("Payment Complete Notification");
 	}
-
 	public void viewApprovedStudents() {
 		for(Integer studentID: approvedStudents){
 			System.out.println(studentID);
