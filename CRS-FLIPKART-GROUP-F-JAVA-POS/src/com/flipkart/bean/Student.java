@@ -1,44 +1,45 @@
 package com.flipkart.bean;
 
-import com.flipkart.utils.Courses;
+import java.util.ArrayList;
 
-import java.util.List;
+public class Student extends User{
 
-public class Student {
-    private int studentId;
-    private String name;
-    private String department;
-    private List<Courses> registeredCourses;
+	private Integer studentID;
+	private String department;
+	private ArrayList<String> RegisteredCourses = new ArrayList<String>();
+	public Student(String userName, String name, String role, String password,Integer studentID, String department, ArrayList<String> RegisteredCourses) {
+		super(userName,name,role,password);
+		this.studentID = studentID;
+		this.department = department;
+		this.RegisteredCourses = RegisteredCourses;
+	}
+	public Student() {
+		super();
+	}
 
-    public String getName() {
-        return name;
-    }
+	public Integer getStudentID() {
+		return studentID;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setStudentID(Integer studentID) {
+		this.studentID = studentID;
+	}
 
-    public String getDepartment() {
-        return department;
-    }
+	public String getDepartment() {
+		return department;
+	}
 
-    public void setDepartment(String department) {
-        this.department = department;
-    }
+	public void setDepartment(String department) {
+		this.department = department;
+	}
 
-    public List<Courses> getRegisteredCourses() {
-        return registeredCourses;
-    }
+	public ArrayList<String> getRegisteredCourses() {
+		return RegisteredCourses;
+	}
 
-    public void setRegisteredCourses(List<Courses> registeredCourses) {
-        this.registeredCourses = registeredCourses;
-    }
-
-    public int getStudentId() {
-        return studentId;
-    }
-
-    public void setStudentId(int studentId) {
-        this.studentId = studentId;
-    }
+	public void setRegisteredCourses(ArrayList<String> registeredCourses) {
+		this.RegisteredCourses = registeredCourses;
+	}
+	
+	
 }
